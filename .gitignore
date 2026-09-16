@@ -1,0 +1,57 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environment / secrets
+.env
+.env.*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test/runtime-generated files
+lecturer_decision_log.csv
+
+# Local logs and generated reports
+app_log.txt
+feedback_log_backup.csv
+final_validation.pu
+project_files.txt
+project_structure.txt
+
+# Old / backup application files
+app/app_backup_before_ui.ps1
+app/app_old.py
+app/views/decision_support_backup.py
+
+# Dataset archives / old backups
+dataset/*.zip
+dataset/*.zip_old
+dataset/.student.zip_old
+
+# Experimental notebook artifacts
+notebooks/experimental_models/
+
+# Unused model artifacts for deployment
+models/random_forest_model.pkl
+models/xgboost_model.pkl
+models/explainer_lime.pkl
+models/explainer_shap.pkl

@@ -1,0 +1,2 @@
+absences_weight,studytime_weight,G1_weight,G2_weight,Grade_Momentum_weight,failures_weight,freetime_weight,goout_weight
+0.95,1.0,1.0,1.2,1.0,1.0,1.0,1.0
