@@ -1106,7 +1106,7 @@ def render_footer():
 
     st.markdown(
         '<div class="app-footer">'
-        '<h4© 2026 InsightED · AI-Powered Academic Decision Support</h4'
+        '<h4>© 2026 InsightED · AI-Powered Academic Decision Support</h4>'
         '<br>'
         '<p>Machine Learning · Explainable AI · Actionable Pedagogical Recommendations · Human Feedback</p>'
         '</div>',
