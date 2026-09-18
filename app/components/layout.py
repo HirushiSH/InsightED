@@ -34,8 +34,8 @@ def apply_theme():
         
         /* Sidebar width */
         section[data-testid="stSidebar"] {
-            width: 250px !important;
-            min-width: 250px !important;
+            width: 250px;
+            min-width: 250px;
         }
            
         section[data-testid="stSidebar"] {
@@ -904,6 +904,60 @@ def apply_theme():
             box-shadow: none !important;
         }
 
+        /* =========================================================
+        MOBILE RESPONSIVE SIDEBAR
+        Keep the desktop sidebar unchanged, but let Streamlit
+        handle the sidebar normally on small screens.
+        ========================================================= */
+
+        @media (max-width: 768px) {
+
+            /* Let Streamlit control the sidebar width on mobile */
+            section[data-testid="stSidebar"] {
+                width: auto !important;
+                min-width: 0 !important;
+            }
+
+            /* Give the opened mobile sidebar a solid background
+            so page content cannot visually show through it */
+            section[data-testid="stSidebar"] > div {
+                background: var(--secondary-background-color) !important;
+            }
+
+            /* Reduce main content side padding */
+            .main .block-container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            /* Smaller page headings on phones */
+            .page-title {
+                font-size: 1.6rem !important;
+            }
+
+            .page-description {
+                font-size: 0.88rem !important;
+            }
+
+            /* Prevent footer from becoming too wide */
+            .app-footer {
+                margin-top: 2.5rem;
+                padding: 1.2rem 0.5rem;
+                font-size: 0.68rem;
+            }
+
+            .app-footer h3 {
+                font-size: 0.8rem !important;
+                line-height: 1.4 !important;
+            }
+
+            .app-footer p {
+                line-height: 1.5 !important;
+            }
+        }
+        
         </style>
         """,
         unsafe_allow_html=True,
@@ -1016,9 +1070,9 @@ def render_sidebar():
             '<span class="status-dot"></span>'
             'AI Engine Online'
             '</div>'
-            '<div class="system-subtitle">'
-            'ML · XAI · Recommendations'
-            '</div>'
+            #'<div class="system-subtitle">'
+            #'ML · XAI · Recommendations'
+            #'</div>'
             '</div>',
             unsafe_allow_html=True,
         )
@@ -1027,14 +1081,14 @@ def render_sidebar():
         # DESCRIPTION
         # ----------------------------------------------------
 
-        st.markdown(
-            '<div class="sidebar-description">'
-            'InsightED supports lecturers by combining '
-            'machine learning, explainable AI and '
-            'actionable intervention recommendations.'
-            '</div>',
-            unsafe_allow_html=True,
-        )
+        #st.markdown(
+        #    '<div class="sidebar-description">'
+        #    'InsightED supports lecturers by combining '
+        #    'machine learning, explainable AI and '
+        #    'actionable intervention recommendations.'
+        #    '</div>',
+        #    unsafe_allow_html=True,
+        #)
 
     return current_page
 
@@ -1052,8 +1106,9 @@ def render_footer():
 
     st.markdown(
         '<div class="app-footer">'
-        'InsightED · Machine Learning · Explainable AI · '
-        'Actionable Pedagogical Recommendations · Human Feedback'
+        '<h3>© 2026 InsightED · AI-Powered Academic Decision Support</h3>'
+        '<br>'
+        '<p>Machine Learning · Explainable AI · Actionable Pedagogical Recommendations · Human Feedback</p>'
         '</div>',
         unsafe_allow_html=True,
     )
