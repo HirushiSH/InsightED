@@ -137,9 +137,7 @@ def load_weights():
         return DEFAULT_WEIGHTS.copy()
 
 
-# ============================================================
-# 4. XAI → PEDAGOGICAL ACTION MAPPING
-# ============================================================
+# 4. XAI → PEDAGOGICAL ACTION MAPPING =======================
 
 RECOMMENDATION_MAP = {
 
@@ -438,10 +436,8 @@ def update_weights_from_feedback():
 
     initialize_weights()
 
-    # --------------------------------------------------------
     # No feedback file
-    # --------------------------------------------------------
-
+    
     if not os.path.exists(LOG_FILE):
 
         return

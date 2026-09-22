@@ -548,9 +548,7 @@ class InsightEDPredictionService:
 
         return result
 
-    # ============================================================
     # PREDICT ONE STUDENT
-    # ============================================================
 
     def predict_student(self, df):
         """
@@ -567,9 +565,7 @@ class InsightEDPredictionService:
             df
         )
 
-    # ============================================================
-    # LIME EXPLANATION
-    # ============================================================
+    # ====LIME EXPLANATION=========================
 
     def explain_student(self, df, index=0):
         """

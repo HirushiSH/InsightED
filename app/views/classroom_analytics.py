@@ -4,9 +4,7 @@ import os
 import joblib
 import matplotlib.pyplot as plt
 
-# ============================================================
-# MODEL PATHS
-# ============================================================
+# ===========MODEL PATHS ===========
 
 PROJECT_ROOT = os.path.dirname(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,10 +22,7 @@ MODEL_PATH = os.path.join(
     "logistic_regression_model.pkl"
 )
 
-
-# ============================================================
-# LOAD MODEL
-# ============================================================
+# LOAD MODEL ==============================================
 
 preprocessor = joblib.load(PREPROCESSOR_PATH)
 model = joblib.load(MODEL_PATH)
