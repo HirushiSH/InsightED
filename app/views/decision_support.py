@@ -272,10 +272,10 @@ def render_decision_support():
 
     st.write(risk_message)
 
-    st.caption(
-        f"Model: Logistic Regression | "
-        f"Predicted At-Risk probability: {risk_probability:.1%}"
-    )
+    #st.caption(
+    #    f"Model: Logistic Regression | "
+    #    f"Predicted At-Risk probability: {risk_probability:.1%}"
+    #)
 
     # EXPLAINABLE AI — LECTURER-FRIENDLY EXPLANATION
     # ============================================================
@@ -287,18 +287,13 @@ def render_decision_support():
     st.subheader("Why is this student at risk?")
 
     st.write(
-        "The model identified the following factors as the "
+        "Identified the following factors as the "
         "main contributors to this student's predicted risk."
     )
 
-    # ============================================================
+    
     # CENTRALIZED LIME EXPLANATION
-    # ============================================================
-
-    # ============================================================
-    # CENTRALIZED LIME EXPLANATION
-    # ============================================================
-
+    
     # Use the original selected student input.
     # The prediction service performs preprocessing internally.
     lime_explanation = prediction_service.explain_student(
@@ -349,7 +344,7 @@ def render_decision_support():
 
             message = (
                 f"Student age ({student['age']}) "
-                f"contributed to the model's assessment."
+                f"contributed to the assessment."
             )
 
         # Mother's job
@@ -365,7 +360,7 @@ def render_decision_support():
 
             message = (
                 "This student characteristic contributed "
-                "to the model's prediction."
+                "to the prediction."
             )
 
         return message
@@ -422,7 +417,7 @@ def render_decision_support():
                     unsafe_allow_html=True
                 )
 
-                st.caption("MODEL IMPACT")
+                #st.caption("MODEL IMPACT")
 
                 st.progress(
                     min(int(impact * 100), 100)
@@ -531,10 +526,10 @@ def render_decision_support():
         "individual prediction."
     )
 
-    st.caption(
-        "Explanation generated using LIME to identify factors "
-        "influencing this individual prediction."
-    )
+    #st.caption(
+    #    "Explanation generated using LIME to identify factors "
+    #    "influencing this individual prediction."
+    #)
 
         
 # -------XAI-DRIVEN RECOMMENDED SUPPORT ------
@@ -560,14 +555,18 @@ def render_decision_support():
 
     with st.container(border=True):
 
-        st.markdown("### AI-Generated Recommendation")
+        st.markdown(
+            '<h3 style="font-size:1.05rem; font-weight:600; color:#2f6db3; margin-bottom:0.3rem;">'
+            'AI-Generated Recommendation</h3>',
+            unsafe_allow_html=True,
+        )
 
         st.write(recommendation)
 
-    st.caption(
-        "Recommendation generated from the student's "
-        "local LIME explanation."
-    )
+    #st.caption(
+    #    "Recommendation generated from the student's "
+    #    "local LIME explanation."
+    #)
 
     # ============================================================
     # LECTURER DECISION
@@ -789,12 +788,12 @@ def render_decision_support():
     # RESEARCH NOTE
     # ============================================================
 
-    st.divider()
+    #st.divider()
 
-    st.caption("EXPLAINABLE DECISION SUPPORT")
+    #st.caption("EXPLAINABLE DECISION SUPPORT")
 
-    st.write(
-        "InsightED connects academic-risk predictions with "
-        "understandable explanations, actionable pedagogical "
-        "recommendations, and lecturer feedback."
-    )
+    #st.write(
+    #    "InsightED connects academic-risk predictions with "
+    #    "understandable explanations, actionable pedagogical "
+    #    "recommendations, and lecturer feedback."
+    #)
