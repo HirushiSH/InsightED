@@ -583,7 +583,7 @@ def apply_theme():
             border-radius: 16px;
             padding: 24px 22px;
             width: 100%;
-            height: 100%;
+            height: 230px;
             flex: 1 1 auto;
             box-sizing: border-box;
             display: flex;
@@ -603,6 +603,11 @@ def apply_theme():
             line-height: 1;
             margin-bottom: 12px;
             display: inline-block;
+        }
+
+        .feature-card-icon i {
+            font-size: 2rem;
+            color: #2563EB;
         }
 
         .feature-card-title {
@@ -631,7 +636,7 @@ def apply_theme():
             border-radius: 14px;
             padding: 20px 20px;
             width: 100%;
-            height: 100%;
+            height: 180px;
             flex: 1 1 auto;
             box-sizing: border-box;
             display: flex;
@@ -679,7 +684,7 @@ def apply_theme():
             border-radius: 14px;
             padding: 16px 17px;
             width: 100%;
-            height: 100%;
+            height: 120px;
             flex: 1 1 auto;
             box-sizing: border-box;
             display: flex;

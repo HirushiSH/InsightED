@@ -72,21 +72,28 @@ def render_home():
 
         st.markdown("")
 
+        # --- Add this once near the top of the page (e.g. right after st.set_page_config) ---
+        st.markdown(
+            '<link rel="stylesheet" '
+            'href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">',
+            unsafe_allow_html=True,
+        )
+     
         about_cards = [
             (
-                "📊",
+                '<i class="fas fa-chart-line"></i>',
                 "Predict Academic Risk",
                 "Machine learning analyses student academic characteristics "
                 "to identify students who may require additional support.",
             ),
             (
-                "🧠",
+                '<i class="fas fa-brain"></i>',
                 "Explain Predictions",
                 "Explainable AI identifies the factors that contributed "
                 "to an individual student's predicted academic risk.",
             ),
             (
-                "🎯",
+                '<i class="fas fa-bullseye"></i>',
                 "Recommend Interventions",
                 "Model explanations are translated into practical "
                 "pedagogical actions that lecturers can evaluate and apply.",
